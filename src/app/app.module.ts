@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { WolfCardComponent } from './components/wolf-card/wolf-card.component';
+import { AboutPageComponent } from './components/about-page/about-page.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { WolfCardComponent } from './components/wolf-card/wolf-card.component';
     FooterComponent,
     HomePageComponent,
     WolfCardComponent,
+    AboutPageComponent,
   ],
   imports: [
     BrowserModule,

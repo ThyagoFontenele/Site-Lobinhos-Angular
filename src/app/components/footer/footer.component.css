@@ -4,6 +4,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    min-height: 250px;
     gap: 30px;
 }
 .container-info{

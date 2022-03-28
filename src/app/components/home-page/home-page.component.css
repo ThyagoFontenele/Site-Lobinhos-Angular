@@ -144,5 +144,7 @@ p{
     display: flex;
     flex-direction: column;
     margin: 70px 0;
+    align-items: center;
+    justify-content: center;
     gap: 80px;
 }
