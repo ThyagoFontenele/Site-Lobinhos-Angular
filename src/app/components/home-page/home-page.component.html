@@ -1,0 +1,28 @@
+<section class="adote">
+    <h1>Adote um Lobinho</h1>
+    <p>É claro que o consenso sobre a necessidade de qualificação apresenta tendências no sentido de aprovar a manutenção das regras de conduta normativas.</p>
+</section>
+
+<section class="sobre">
+    <h1 class="title-gold">Sobre</h1>
+    <p>Não obstante, o surgimento do comércio virtual faz parte de um processo de gerenciamento do levantamento das variáveis envolvidas. Não obstante, o surgimento do comércio virtual faz parte de um processo de gerenciamento do levantamento das variáveis envolvidas.Não obstante, o surgimento do comércio virtual faz parte de um processo de gerenciamento do levantamento das variáveis envolvidas.Não obstante, o surgimento do comércio virtual faz parte de um processo de gerenciamento do levantamento das variáveis envolvidas.</p>
+</section>
+
+<section class="valores">
+    <h1 class="title-gold">Valores</h1>
+    <div class="valores-container">
+        <div class="valores-info" *ngFor="let value of values">
+            <div class="div-img">
+                <img src='../../../assets/{{value.img_url}}.svg' alt="{{value.title}}">
+            </div>
+            <h1>{{value.title}}</h1>
+            <p>{{value.description}}</p>
+        </div>
+    </div>
+</section>
+<section class="lobos-exemplo" *ngIf="wolves">
+    <h1 class="title-gold">Lobos Exemplo</h1>
+    <div class="wolves">
+        <app-wolf-card *ngFor="let wolf of wolves" [wolf]="wolf"></app-wolf-card>
+    </div>
+</section>
