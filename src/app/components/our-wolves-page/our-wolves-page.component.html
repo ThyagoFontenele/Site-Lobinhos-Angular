@@ -1,0 +1,23 @@
+<section class="our-wolves">
+    <div class="input-div">
+        <input 
+        type="text" 
+        [(ngModel)]="name"
+        (ngModelChange)="findWolf()"
+        placeholder="Pesquise pelo nome do lobo"
+        >
+        <a>+ Lobo</a>
+    </div>
+    <div class="checkbox-div">
+        <input type="checkbox" (click)="toggleWolves()">
+        <span>Ver lobinhos adotados</span>
+    </div>
+</section>
+<section class="wolves-list">
+    <app-wolf-card 
+        *ngFor="let wolf of wolvesInScreen"
+        [wolf]="wolf" 
+        [withButton]="true">
+    </app-wolf-card>
+    <h1 *ngIf="wolvesInScreen.length === 0">Nenhum Lobo com esse nomo encontrado :(</h1>
+</section>

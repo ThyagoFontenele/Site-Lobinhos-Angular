@@ -12,7 +12,11 @@ export class WolvesService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Wolf[]>{
-    return this.http.get<[]>(this.baseURL);
+    return this.http.get<Wolf[]>(this.baseURL);
+  }
+
+  getAllAdopted(): Observable<Wolf[]>{
+    return this.http.get<Wolf[]>(`${this.baseURL}/adopted`);
   }
 
   getOne(id: number): Observable<Wolf>{

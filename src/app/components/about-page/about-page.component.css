@@ -4,7 +4,7 @@ div{
     align-items:center;
     justify-content:center;
     gap: 30px;
-    min-height: calc(100vh - 390px);
+    min-height: calc(100vh - 380px);
 }
 h1{
     font-size: 3rem;

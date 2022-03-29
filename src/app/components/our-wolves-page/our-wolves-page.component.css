@@ -1,0 +1,64 @@
+.our-wolves{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    gap: 10px;
+}
+.input-div{
+    display: flex;
+    align-items: center;
+    height: 35px;
+    gap: 10px;
+}
+.input-div input{
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.input-div a{
+    background-color: #DEB959;
+    color: #fff;
+    padding: 0px 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    height: 100%;
+    cursor: pointer;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 500px){
+    .input-div{
+        height: 30px;
+    }
+    .input-div a {
+        font-size: 1.2rem;
+    }
+}
+.checkbox-div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.checkbox-div span{
+    font-weight: 600;
+}
+.wolves-list{
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    gap: 50px;
+    min-height: 42vh;
+}
+.wolves-list h1{
+    font-size: 1.2rem;
+    font-weight: bold;
+}

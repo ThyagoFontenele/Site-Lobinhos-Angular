@@ -1,9 +1,15 @@
 <div class="container">
     <div class="img-div">
-        <img src={{wolf.image_url}} alt="imagem do lobo {{wolf.name}}">
+        <img src="{{wolf.image_url}}" alt="imagem do lobo {{wolf.name}}">
     </div>
     <div class="info-div">
         <h1>{{wolf.name}}</h1>
+        <div *ngIf="withButton">
+        <a *ngIf="wolf.adopted; else NaoAdotado" class='adotado'> Adotado</a>
+        <ng-template #NaoAdotado>
+            <a class='adotar' routerLink="">Adotar</a>
+        </ng-template>
+        </div>
         <span>Idade: {{wolf.age}} anos</span>
         <p>{{wolf.description}}</p>
     </div>

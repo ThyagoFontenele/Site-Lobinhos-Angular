@@ -8,9 +8,8 @@ import { Wolf } from 'src/app/Wolf';
 })
 export class WolfCardComponent implements OnInit {
 
-  @Input() wolf!: Wolf;
-  @Input() hasButton?: boolean = false;
-
+  @Input() wolf!: Wolf; 
+  @Input() withButton: boolean = false;
   constructor() { }
 
   ngOnInit(): void {

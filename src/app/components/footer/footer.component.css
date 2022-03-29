@@ -37,6 +37,7 @@ footer{
  justify-content: center;
  padding: 2px 5px 7px;
  align-self: flex-end;
+ text-decoration: none;
 }
 .desenvolvido-com{
     display: flex;

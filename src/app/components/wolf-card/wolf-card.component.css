@@ -30,11 +30,32 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding: 0 20px;
+    position: relative;
 }
 .info-div h1{
     font-size: 1.8rem;
     font-weight: bold;
 }
+.info-div a{
+    position: absolute;
+    right: 50px;
+    color: #fff;
+    top: 0;
+    font-size: 1.6rem;
+    padding: 4px 10px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.adotado{
+    background-color: #7AAC3A;
+    cursor:default;
+}
+.adotar{
+    background-color: #DEB959;
+    cursor: pointer;
+}
+
 .info-div span{
     font-size: 1.2rem;
 }
@@ -42,7 +63,8 @@
     font-size: 1.5rem;
     font-weight: 500;
     margin-top: 20px;
-    max-width: 500px;
+    min-width: 440px;
+    max-width: 440px;
 }
 
 @media (max-width: 510px){
@@ -50,11 +72,15 @@
        width: 350px;
        height: 248px;
     }
+    .info-div{
+        padding: 0 20px;
+    }
     .info-div h1{
         font-size: 1.4rem;
     }
     .info-div p, span{
-        font-size: 1rem;
+        font-size: 1.2rem;
+        min-width: 300px;
     }
 }
 @media (max-width: 400px){
@@ -64,5 +90,12 @@
     .img-div{
        width: 280px;
        height: 178px;
+    }
+    .info-div p, span{
+        font-size: 1rem;
+        min-width: 280px;
+    }
+    .info-div a{
+        font-size: 1rem;
     }
 }
