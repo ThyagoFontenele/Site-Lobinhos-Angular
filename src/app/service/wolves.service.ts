@@ -9,21 +9,21 @@ import {Wolf} from '../Wolf';
 export class WolvesService {
   private baseURL = 'http://lobinhos.herokuapp.com/wolves';
   
-  constructor(private http: HttpClient) { }
+  constructor(private https: HttpClient) { }
 
   getAll(): Observable<Wolf[]>{
-    return this.http.get<Wolf[]>(this.baseURL);
+    return this.https.get<Wolf[]>(this.baseURL);
   }
 
   getAllAdopted(): Observable<Wolf[]>{
-    return this.http.get<Wolf[]>(`${this.baseURL}/adopted`);
+    return this.https.get<Wolf[]>(`${this.baseURL}/adopted`);
   }
 
   getOne(id: number): Observable<Wolf>{
-    return this.http.get<Wolf>(`${this.baseURL}/${id}`);
+    return this.https.get<Wolf>(`${this.baseURL}/${id}`);
   }
 
   remove(id: number) {
-    return this.http.delete<Wolf>(`${this.baseURL}/${id}`);
+    return this.https.delete<Wolf>(`${this.baseURL}/${id}`);
   }
 }
