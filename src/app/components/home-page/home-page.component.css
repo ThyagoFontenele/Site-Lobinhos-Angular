@@ -17,7 +17,7 @@ p{
     justify-content: center;
     flex-direction: column;
     gap: 30px;
-    
+    margin-top: 110px;
 }
 .adote h1{
     font-size: 5rem;

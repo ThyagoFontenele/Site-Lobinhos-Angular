@@ -5,6 +5,7 @@ div{
     justify-content:center;
     gap: 30px;
     min-height: calc(100vh - 380px);
+    margin-top: 110px;
 }
 h1{
     font-size: 3rem;
