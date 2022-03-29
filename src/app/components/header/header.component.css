@@ -5,7 +5,6 @@ header{
     background-color: #85CDF5;
     padding: 10px 20px;
     height: 110px;
-    box-sizing: border-box;
     position: relative;
     transition: 0.3s;
     width: 100%;
@@ -14,7 +13,7 @@ header{
     left: 0;
     z-index: 10;
 }
-.active{
+header.active{
     position: fixed;
     animation: effect .2s linear forwards;
 }
@@ -33,7 +32,7 @@ header{
     bottom: -80px;
     right: -100%;
     width: 100%;
-    display: flex;
+    display: none;
     gap: 10px;
     padding: 20px;
     flex-direction: column;
@@ -42,8 +41,9 @@ header{
     background-color: #85CDF5;
     border-bottom: 1px solid #333;
     display: none;
-    transition: 0.3s
+    transition: 0.3s;
 }
+
 .nav a{
     color: #fff;
     text-decoration: none;
@@ -128,10 +128,8 @@ header img{
     .links{
         display: none;
     }
-    .nav{
-        display:flex;
-    }
     .nav.active{
         right: 0;
+        display: flex;
     }
 }
