@@ -7,7 +7,7 @@ import {Wolf} from '../Wolf';
 })
 
 export class WolvesService {
-  private baseURL = 'http://lobinhos.herokuapp.com/wolves';
+  private baseURL = 'https://lobinhos.herokuapp.com/wolves';
   
   constructor(private https: HttpClient) { }
 
