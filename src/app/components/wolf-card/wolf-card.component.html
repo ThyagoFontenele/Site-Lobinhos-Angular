@@ -7,7 +7,7 @@
         <div *ngIf="withButton">
         <a *ngIf="wolf.adopted; else NaoAdotado" class='adotado'> Adotado</a>
         <ng-template #NaoAdotado>
-            <a class='adotar' routerLink="">Adotar</a>
+            <a class='adotar' routerLink="/wolf/{{wolf.id}}">Adotar</a>
         </ng-template>
         </div>
         <span>Idade: {{wolf.age}} anos</span>

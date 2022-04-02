@@ -7,7 +7,7 @@ import { Wolf } from '../../Wolf';
 @Component({
   selector: 'app-wolf',
   templateUrl: './wolf.component.html',
-  styleUrls: ['./wolf.component.css']
+  styleUrls: ['./wolf.component.scss']
 })
 export class WolfComponent implements OnInit {
 

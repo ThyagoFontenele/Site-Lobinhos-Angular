@@ -5,12 +5,14 @@ import { WolfComponent } from './components/wolf/wolf.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { OurWolvesPageComponent } from './components/our-wolves-page/our-wolves-page.component';
+import { AddWolfComponent } from './components/add-wolf/add-wolf.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
   {path: 'our-wolves', component: OurWolvesPageComponent},
-  {path: 'quem-somos', component: AboutPageComponent},
-  {path: 'lobo/:id', component: WolfComponent}
+  {path: 'about-us', component: AboutPageComponent},
+  {path: 'wolf/:id', component: WolfComponent},
+  {path: 'wolf-add', component: AddWolfComponent}
 ];
 
 @NgModule({

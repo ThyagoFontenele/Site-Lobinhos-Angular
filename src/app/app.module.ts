@@ -13,6 +13,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { WolfCardComponent } from './components/wolf-card/wolf-card.component';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { OurWolvesPageComponent } from './components/our-wolves-page/our-wolves-page.component';
+import { AddWolfComponent } from './components/add-wolf/add-wolf.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { OurWolvesPageComponent } from './components/our-wolves-page/our-wolves-
     WolfCardComponent,
     AboutPageComponent,
     OurWolvesPageComponent,
+    AddWolfComponent,
   ],
   imports: [
     BrowserModule,
