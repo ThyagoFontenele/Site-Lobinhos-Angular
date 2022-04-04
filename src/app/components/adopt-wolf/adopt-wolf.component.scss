@@ -1,3 +1,99 @@
+@mixin input{
+    border: none;
+    border-bottom: 1px solid #333;
+    font-weight: bold;
+    height: 28px;
+    font-size: 1.1rem;
+    padding: 0 5px;
+}
+
+
 section{
-    margin-top: 110px;
+    max-width: 960px;
+    padding: 40px 20px;
+    margin: 110px auto 0 auto;
+    .infos{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        img{
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h1{
+                font-size: 3rem;
+                font-weight: 600;
+                margin-top: 25px;
+            }
+            span{
+                font-weight: 600;
+            }
+        }
+    }
+    form{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        .inputs-name-year{
+            display: flex;
+            width: 100%;
+            gap: 10px;
+            div{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                label{
+                    font-weight: 600;
+                    font-size: 1.4rem;
+                }
+                input{
+                    @include input;
+                }
+                &:last-child{
+                    width: 60px;
+                }
+            }
+        }
+        .input-email{
+            width: 100%;
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+            label{
+                font-weight: 600;
+                font-size: 1.4rem;
+            }
+            input{
+                @include input;
+            }
+        }
+        button{
+            background-color: #2C5680;
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 600;
+            padding: 5px 35px;
+            margin-top: 20px;
+            align-self: center;
+            border: none;
+            cursor: pointer;
+            &:hover{
+                filter: brightness(0.9);
+            }
+        }
+    }
+    @media (max-width: 620px) {
+        .infos{
+            justify-content: center;
+            gap: 5px;
+        }
+    }
 }
