@@ -14,6 +14,7 @@ import { WolfCardComponent } from './components/wolf-card/wolf-card.component';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { OurWolvesPageComponent } from './components/our-wolves-page/our-wolves-page.component';
 import { AddWolfComponent } from './components/add-wolf/add-wolf.component';
+import { AdoptWolfComponent } from './components/adopt-wolf/adopt-wolf.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AddWolfComponent } from './components/add-wolf/add-wolf.component';
     AboutPageComponent,
     OurWolvesPageComponent,
     AddWolfComponent,
+    AdoptWolfComponent,
   ],
   imports: [
     BrowserModule,

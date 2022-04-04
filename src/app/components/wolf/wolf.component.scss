@@ -57,7 +57,7 @@ section{
                 margin-top: 40px;
                 button{
                     @include button;
-                    &:last-child{
+                    &.remove-button{
                         @include button(#DE5959);
                     }
                 }
