@@ -1,3 +1,114 @@
-p{
-    margin-top: 150px;
+@mixin button($theme: #7AAC3A){
+    border: none;
+    padding: 14px 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: white;
+    background-color: $theme;
+    cursor: pointer;
+    &:hover{
+        filter: brightness(0.9);
+    }
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 140px;
+    margin-bottom: 110px;
+    h1{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .info{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 980px;
+        gap: 40px;
+        justify-content: center;
+        .img-div{
+            width: 430px;
+            height: 328px;
+            position: relative;
+            z-index: 1;
+            
+            &:before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color:#2C5680;
+                border: 3px solid #333;
+                z-index: -1;
+                transform: translate(-8%, -9%);
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                border: 0.1px solid #333;
+            }
+            .buttons{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 40px;
+                button{
+                    @include button;
+                    &:last-child{
+                        @include button(#DE5959);
+                    }
+                }
+            }
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 0 20px;
+            max-width: 400px;
+            p{
+                font-size: 1.3rem;
+                font-weight: 500;
+            }
+        }
+        
+    }
+    
+    @media(max-width: 960px){
+        .info{
+            .img-div{
+                width: 340px;
+                height: 238px;
+                .buttons{
+                    margin-top: 20px;
+                }
+                
+            }
+        }
+    }
+    @media(max-width: 850px){
+        .info{
+            .text{
+                font-size:1rem;
+                margin-top: 50px;
+            }
+        }
+    }
+    @media(max-width: 400px){
+        .info{
+            .img-div{
+                width: 300px;
+                height: 208px;
+                &:before{
+                    transform: translate(-4%, -5%);
+                }
+                .buttons{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
 }
