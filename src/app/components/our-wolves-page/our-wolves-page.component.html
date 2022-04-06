@@ -20,4 +20,9 @@
         [withButton]="true">
     </app-wolf-card>
     <h1 *ngIf="wolvesInScreen.length === 0">Nenhum lobo com esse nome foi encontrado :(</h1>
+    <div class="buttons">
+        <button *ngIf="page > 1" (click)="setBackPage()">back</button>
+        <button *ngIf="page !== pages && pages > 1" (click)="setNextPage()">next</button>
+    </div>
+    
 </section>

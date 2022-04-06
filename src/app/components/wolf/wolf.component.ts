@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { WolvesService } from '../../service/wolves.service';
 
 import { Wolf } from '../../Wolf';
@@ -16,12 +16,14 @@ export class WolfComponent implements OnInit {
   constructor(private wolvesList: WolvesService, private route: ActivatedRoute) { 
     this.getWolf();
   }
-
+  id:number = Number(this.route.snapshot.paramMap.get('id'));
   ngOnInit(): void {
   }
 
   getWolf() {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.wolvesList.getOne(id).subscribe((wolf) => (this.wolf = wolf));
+    this.wolvesList.getOne(this.id).subscribe((wolf) => (this.wolf = wolf));
+  }
+  deleteWolf(){
+    this.wolvesList.remove(this.id).subscribe();
   }
 }

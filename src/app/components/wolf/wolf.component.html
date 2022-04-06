@@ -5,7 +5,7 @@
             <img src={{wolf.image_url}} alt="imagem do lobo {{wolf.name}}">
             <div class="buttons">
                 <a routerLink="/adopt/{{wolf.id}}"><button>ADOTAR</button></a>
-                <button class="remove-button">EXCLUIR</button>
+                <button class="remove-button" (click)="deleteWolf()">EXCLUIR</button>
             </div>
         </div>
         <div class="text">
