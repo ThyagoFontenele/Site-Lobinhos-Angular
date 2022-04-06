@@ -1,4 +1,4 @@
-import { Component, OnChanges, DoCheck, OnInit } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 import { Wolf } from 'src/app/Wolf';
 import { WolvesService } from 'src/app/service/wolves.service';
 
@@ -21,7 +21,12 @@ export class OurWolvesPageComponent implements DoCheck{
   page: number = 1;
   offset: number = 0;
 
+  scrollFunction(){
+    document.documentElement.scrollTo(0,0);
+  }
+  
   setBackPage(){
+    this.scrollFunction();
     this.page--;
     this.offset -= 5;
     this.wolvesInScreen = [];
@@ -32,6 +37,7 @@ export class OurWolvesPageComponent implements DoCheck{
     }
   }
   setNextPage(){
+    this.scrollFunction();
     this.page++;
     this.offset += 5;
     this.wolvesInScreen = [];
