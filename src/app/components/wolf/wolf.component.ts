@@ -23,7 +23,4 @@ export class WolfComponent implements OnInit {
   getWolf() {
     this.wolvesList.getOne(this.id).subscribe((wolf) => (this.wolf = wolf));
   }
-  deleteWolf(){
-    this.wolvesList.remove(this.id).subscribe();
-  }
 }
