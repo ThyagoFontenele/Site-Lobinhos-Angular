@@ -1,20 +1,16 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   class: string = 'menu-burger'
   navClass: string = 'nav';
   classHeader: string = '';
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  
   @HostListener("document:scroll")
   scrollFunction(){
     if(document.documentElement.scrollTop > 700){
