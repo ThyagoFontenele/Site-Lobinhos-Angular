@@ -1,0 +1,9 @@
+header([ngClass]="classHeader")
+  a.links(routerLink="/our-wolves") Nossos Lobos
+  a(routerLink="")
+    img(src="../../../assets/logoWolf.png", alt="logo")
+  a.links(routerLink="about-us") Quem Somos
+  button([ngClass]="navClass", (click)="toggleActive()") 
+  nav([ngClass]="navClass")
+    a(routerLink="/about-us") Quem Somos
+    a(routerLink="/our-wolves") Nossos Lobinhos
