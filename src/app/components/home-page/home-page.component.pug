@@ -1,0 +1,22 @@
+section.adote
+  a(routerLink="/our-wolves")
+    h1 Adote um lobinho
+  p É claro que o consenso sobre a necessidade de qualificação apresenta tendências no sentido de aprovar a manutenção das regras de conduta normativas.
+
+section.sobre
+  h1.title-gold Sobre
+  p Não obstante, o surgimento do comércio virtual faz parte de um processo de gerenciamento do levantamento das variáveis envolvidas. Não obstante, o surgimento do comércio virtual faz parte de um processo de gerenciamento do levantamento das variáveis envolvidas.Não obstante, o surgimento do comércio virtual faz parte de um processo de gerenciamento do levantamento das variáveis envolvidas.Não obstante, o surgimento do comércio virtual faz parte de um processo de gerenciamento do levantamento das variáveis envolvidas.
+
+section.valores
+  h1.title-gold Valores
+  .valores-container
+    .valores-info(*ngFor="let value of values") 
+      .div-img
+        img(src="../../../assets/{{value.img_url}}.svg", alt="{{value.title}}")
+      h1 {{value.title}}
+      p {{value.description}}
+
+section(class="lobos-exemplo", *ngIf="wolves")
+  h1.title-gold Lobos Exemplo
+  .wolves 
+    app-wolf-card(*ngFor="let wolf of wolves", [wolf]="wolf")
